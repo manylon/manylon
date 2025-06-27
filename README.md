@@ -1,4 +1,4 @@
-## Hi there 👋
+![Top Langs](https://github-readme-stats-git-master-manylons-projects.vercel.app/api/top-langs/?username=manylon&layout=compact)
 
 <!--
 **manylon/manylon** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
