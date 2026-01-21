@@ -1,0 +1,150 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 300" width="960" height="300">
+  <defs>
+    <style>
+    @import url(https://fonts.googleapis.com/css?family=Montserrat);
+      svg {
+        font: 10.5em 'Montserrat';
+        font-weight: 800;
+      }
+      /* Base colors */
+      :root {
+        --color-1: #9B5DE5;
+        --color-2: #F15BB5;
+        --color-3: #00BBF9;
+        --color-4: #FEB554;
+        --color-5: #D90041;
+      }
+
+      /* Dark mode palette */
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --color-1: #1D7792;
+          --color-2: #D90041;
+          --color-3: #FEB554;
+          --color-4: #CA3B3B;
+          --color-5: #0C3943;
+        }
+      }
+    <!-- Hello text -->
+      .hello-text {
+        font-size: 75px;
+        font-family: "Montserrat";
+        fill: none;
+        stroke: white;
+        stroke-dasharray: 100%;
+        stroke-width: 3px;
+        stroke-dashoffset: 100%;
+        opacity: 1;
+      }
+
+      .hello-text:nth-child(1) { 
+        stroke: var(--color-1);
+        animation: drawStroke 10s ease forwards 0s, 
+                  holdStroke 1s ease forwards 10s, 
+                  eraseStroke 1.5s ease forwards 11s;
+      }
+      .hello-text:nth-child(2) { 
+        stroke: var(--color-2);
+                animation: drawStroke 10s ease forwards 0s, 
+                  holdStroke 1s ease forwards 10s, 
+                  eraseStroke 1.5s ease forwards 11s;
+      }
+      .hello-text:nth-child(3) { 
+        stroke: var(--color-3);
+                animation: drawStroke 10s ease forwards 0s, 
+                  holdStroke 1s ease forwards 10s, 
+                  eraseStroke 1.5s ease forwards 11s;
+      }
+
+      @keyframes drawStroke {
+        0% {
+          stroke-dashoffset: 100%;
+        }
+        100% {
+          stroke-dashoffset: 0%;
+        }
+      }
+
+      @keyframes holdStroke {
+        0%, 100% {
+          stroke-dashoffset: 0%;
+        }
+      }
+
+      @keyframes eraseStroke {
+        0% {
+          stroke-dashoffset: 0%;
+          opacity: 1;
+        }
+        100% {
+          stroke-dashoffset: -100%;
+          opacity: 0;
+        }
+      }
+      <!-- Animation inspired by Claire Larsen (https://codepen.io/ClaireLarsen/pen/XmVyVX) -->
+      <!-- Main text -->
+
+      .text-main {
+        fill: none;
+        stroke: white;
+        stroke-dasharray: 6% 29%;
+        stroke-width: 5px;
+        stroke-dashoffset: 0%;
+        opacity: 0;
+        animation: stroke-offset 5.5s infinite linear, fadeIn 1s ease forwards;
+      }
+
+      .text-main:nth-child(1){
+        stroke: var(--color-3);
+        animation-delay: 1s;
+      }
+
+      .text-main:nth-child(2){
+        stroke: var(--color-4);
+        animation-delay: 2s;
+      }
+
+      .text-main:nth-child(3){
+        stroke: var(--color-2);
+        animation-delay: 3s;
+      }
+
+      .text-main:nth-child(4){
+        stroke: var(--color-1);
+        animation-delay: 4s;
+      }
+
+      .text-main:nth-child(5){
+        stroke: var(--color-5);
+        animation-delay: 5s;
+      }
+
+      @keyframes fadeIn {
+        0% { opacity: 0; }
+        100% { opacity: 1; }
+      }
+
+      @keyframes stroke-offset{
+        100% {stroke-dashoffset: -35%;}
+      }
+    </style>
+    
+    <symbol id="s-text">
+      <text text-anchor="middle" x="50%" y="80%">manylon</text>
+    </symbol>
+  </defs>
+<g class="hello-group">
+  <text class="hello-text" x="50%" y="100" text-anchor="middle">
+    <tspan class="hello-text" dx="-50">Hello</tspan>
+    <tspan class="hello-text" dx="20">I</tspan>
+    <tspan class="hello-text" dx="20">am</tspan>
+  </text>
+</g>
+  <g class="g-ants">
+    <use href="#s-text" class="text-main"></use>
+    <use href="#s-text" class="text-main"></use>
+    <use href="#s-text" class="text-main"></use>
+    <use href="#s-text" class="text-main"></use>
+    <use href="#s-text" class="text-main"></use>
+  </g>
+</svg>
