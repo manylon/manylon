@@ -3,6 +3,11 @@
     <img src="welcome.svg" style="width: 100%;" alt="Click to see the source">
   </a>
 </div>
+<div style="width: 100%;">
+  <a href="https://github.com/manylon/manylon/blob/main/type.svg">
+    <img src="type.svg" style="width: 100%;" alt="Click to see the source">
+  </a>
+</div>
 <br>
 <p align="center">
     <!-- Social badges section -->
